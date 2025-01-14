@@ -13,7 +13,7 @@ function App() {
         <NavBar />
       </GridItem>
       <Show when={window.screen.width >= 1124}>
-        <GridItem area="aside" bg="yellow">
+        <GridItem area="aside" bg="gold">
           Aside
         </GridItem>
       </Show>
