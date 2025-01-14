@@ -12,14 +12,10 @@ function App() {
       <GridItem area="nav">
         <NavBar />
       </GridItem>
-      <Show when={window.screen.width >= 1124}>
-        <GridItem area="aside" bg="gold">
-          Aside
-        </GridItem>
+      <Show above="lg">
+        <GridItem area="aside">Aside</GridItem>
       </Show>
-      <GridItem area="main" bg="dodgerblue">
-        Main
-      </GridItem>
+      <GridItem area="main">Main</GridItem>
     </Grid>
   );
 }

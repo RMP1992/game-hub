@@ -1,20 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 
-import { defaultSystem } from "@chakra-ui/react";
-import { Theme } from "@chakra-ui/react";
-import { ColorModeProvider } from "@/components/ui/color-mode";
 import App from "./App";
+import theme from "./theme";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider value={defaultSystem}>
-      <ColorModeProvider forcedTheme="dark">
-        <Theme appearance="dark">
-          <App />
-        </Theme>
-      </ColorModeProvider>
+    <ChakraProvider theme={theme}>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <App />
     </ChakraProvider>
   </React.StrictMode>
 );
