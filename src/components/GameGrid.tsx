@@ -11,7 +11,6 @@ const GameGrid = () => {
       spacing={10}
     >
       {error && <Text>{error}</Text>}
-
       {games.map((game) => (
         <GameCard key={game.id} game={game} />
       ))}
